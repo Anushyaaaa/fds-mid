@@ -300,14 +300,38 @@ def create_document():
         "1. GitHub Repository URL & Branch Status:\n"
         "Repository URL: https://github.com/Anushyaaaa/fds-mid\n"
         "Branch: main (Clean, up-to-date, tracking origin/main)\n\n"
-        "2. Deployed Application URL:\n"
+        "2. Deployed Application URL & Deployment Verification:\n"
         "GitHub Pages Deployment: https://anushyaaaa.github.io/fds-mid/\n"
         "Local Run Command: python -m http.server 8000 (accessible at http://localhost:8000)\n\n"
-        "3. Meaningful Git Commit History:"
+        "Deployment Evidence & Working Feature Screenshots:"
     )
 
+    # Insert Figure 3: GitHub Pages Deployment Settings Screenshot
+    img_gh_path = r"C:\Users\Anushya C\.gemini\antigravity-ide\scratch\osm-campuspulse\assets\screenshots\github_pages_deployment.jpg"
+    if os.path.exists(img_gh_path):
+        doc.add_paragraph().paragraph_format.space_before = Pt(6)
+        doc.add_picture(img_gh_path, width=Inches(6.2))
+        p_cap3 = doc.add_paragraph("Figure 3: GitHub Pages Deployment Verification – Active deployment settings at https://github.com/Anushyaaaa/fds-mid/settings/pages showing live site.")
+        p_cap3.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_cap3.runs[0].font.size = Pt(9.5)
+        p_cap3.runs[0].font.italic = True
+        doc.add_paragraph().paragraph_format.space_after = Pt(6)
+
+    # Insert Figure 4: Live Deployed Application Screenshot
+    img_live_path = r"C:\Users\Anushya C\.gemini\antigravity-ide\scratch\osm-campuspulse\assets\screenshots\live_deployed_application.jpg"
+    if os.path.exists(img_live_path):
+        doc.add_paragraph().paragraph_format.space_before = Pt(6)
+        doc.add_picture(img_live_path, width=Inches(6.2))
+        p_cap4 = doc.add_paragraph("Figure 4: Working Live Application Interface – Browser execution at https://anushyaaaa.github.io/fds-mid/ displaying active campus navigation.")
+        p_cap4.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_cap4.runs[0].font.size = Pt(9.5)
+        p_cap4.runs[0].font.italic = True
+        doc.add_paragraph().paragraph_format.space_after = Pt(6)
+
+    doc.add_paragraph("3. Meaningful Git Commit History:")
+
     # Commit History Table
-    commit_table = doc.add_table(rows=7, cols=3)
+    commit_table = doc.add_table(rows=9, cols=3)
     commit_table.alignment = WD_TABLE_ALIGNMENT.CENTER
     commit_table.autofit = False
 
@@ -323,6 +347,8 @@ def create_document():
         run.font.size = Pt(9)
 
     commits = [
+        ("9611a73", "docs", "add official PDF version of exam submission dossier"),
+        ("9522f0c", "docs", "add official Microsoft Word (.docx) exam submission dossier and generator script"),
         ("8fbb060", "docs", "add comprehensive academic examination report and submission README"),
         ("6065f0e", "docs", "add benchmark comparison and UI feature showcase visual evidence"),
         ("aee0ab0", "feat", "implement form validation, event handling, and live Nominatim geocoding"),
