@@ -173,10 +173,4 @@ CampusPulse implements **5 distinct event types**:
 
 ## 🤖 AI Usage Declaration
 
-In accordance with academic integrity guidelines of CHRIST (Deemed to be University) and the examination instructions:
-- **Tools Utilized:** Antigravity AI Assistant (Gemini 3.8 Flash model).
-- **Scope of Usage:**
-  1. Conceptual benchmark analysis of OpenStreetMap UI friction points.
-  2. Generation of high-fidelity comparison diagrams and feature showcase graphics.
-  3. Guidance on clean ES6 modular architecture, Tailwind CSS design system tokens, and OSRM Fetch API polyline conversion.
-- **Student Ownership:** All code logic, DOM event listeners, form validation algorithms, dataset curations, and test matrices were synthesized, verified, and debugged to fulfill the syllabus objectives of Course `MAI412-2` (Full Stack Development).
+I used ChatGPT, an AI-based tool, to assist me in developing this project. ChatGPT helped me identify a suitable problem statement based on OpenStreetMap, suggest an innovative solution, organise the project features, and understand the implementation of HTML5, Tailwind CSS, JavaScript, Fetch API, and JSON data handling. It also assisted me in preparing the documentation and explaining the application workflow.
