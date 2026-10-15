@@ -1,0 +1,11 @@
+# Logs and temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+
+# Local testing
+scratch/
